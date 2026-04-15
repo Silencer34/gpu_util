@@ -1,0 +1,24 @@
+[package]
+name = "gpu_util"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Cross-platform GPU utilities on wgpu (radix sort, ...)"
+readme = "README.md"
+keywords = ["gpu", "wgpu", "sort", "radix", "compute"]
+categories = ["graphics", "algorithms"]
+
+[dependencies]
+wgpu = "=29.0.1"
+bytemuck = { version = "1", features = ["derive"] }
+log = "0.4"
+
+[dev-dependencies]
+pollster = "0.4"
+criterion = "0.5"
+rand = "0.8"
+env_logger = "0.11"
+
+[[bench]]
+name = "radix_sort"
+harness = false
